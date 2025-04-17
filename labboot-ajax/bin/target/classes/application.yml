@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: labboot-ajax
+
+  output:
+    ansi:
+      enabled: always
+
+  # 資料庫連線資訊
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://127.0.0.1:1433;DatabaseName=java;trustServerCertificate=true;
+    username: sa
+    password: P@ssw0rd
+
+  # 多國語系設定
+  messages:
+    basename: i18n.Messages
+    encoding: UTF-8
+    fallback-to-system-locale: false
+
+  # JPA設定
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.SQLServerDialect
+    hibernate:
+      ddl-auto: validate
